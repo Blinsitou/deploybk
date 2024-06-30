@@ -6,7 +6,7 @@ const app = express();
 
 
 app.use(express.json());
-app.use(cors({origin: 'http://localhost:4200'}));
+app.use(cors({origin: '*'}));
 app.use('/api/users', require('./routes/userRoutes'));
 app.use('/api/employees', require('./routes/employeeRoutes'));
 app.listen(3005, () => {
